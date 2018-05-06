@@ -2,12 +2,12 @@ package blockchain.poc;
 
 public class Main {
 	public static void main(String[] args) {
-		int complexity = 5;
+		int complexity = 2;
 		Blockchain blockchain = new Blockchain(complexity);
 		blockchain.addBlock("genesis");
 		blockchain.get(0).mine(complexity);
 		blockchain.addBlock("second");
-//		blockchain.get(1).mine(complexity);
+		blockchain.get(1).mine(complexity);
 		System.out.println(blockchain.isValid());
 	}
 }
